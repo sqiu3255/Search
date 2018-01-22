@@ -39,7 +39,6 @@ public class SearchAlgorithms {
 	
 	public static int binSearch(int[] arr, int query) 
 	{
-		
 		 int L = 0;
 		 int R = arr.length - 1;
 		
