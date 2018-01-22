@@ -13,8 +13,8 @@ public class SearchAlgorithms {
 		System.out.println(binSearch(test2, 23)); //7
 		System.out.println(linSearch(test2, 23)); //7
 		
-		System.out.println(binSearch(test3, 25)); //-1
-		System.out.println(linSearch(test3, 25)); //-1
+		System.out.println(binSearch(test2, 25)); //-1
+		System.out.println(linSearch(test2, 25)); //-1
 		
 		System.out.println(binSearch(test1, 10)); //9
 		System.out.println(linSearch(test1, 1)); //0
@@ -24,11 +24,11 @@ public class SearchAlgorithms {
 	
 	
 	
-	public static int linearSearch(int[] elements, int query) 
+	public static int linSearch(int[] arr, int query) 
 	{
-		for(int x = 0; x < elements.length; x++)
+		for(int x = 0; x < arr.length; x++)
 		{
-			if(elements[x] == query)
+			if(arr[x] == query)
 			{
 				return x;
 			}
@@ -36,35 +36,39 @@ public class SearchAlgorithms {
 		return -1;
 	}
 	
-	if (guess < query)
-	{
-		Binary search on the right side
-	}
-	if (guess > query)
-	{
-		Binary search on the left side
-	}
-	else 
-	{
-		return position of guess
-	}
 	
-	
-	
-	public static int binarySearch(int[] elements, int query) 
+	public static int binSearch(int[] arr, int query) 
 	{
-		int mid = arr.length/2;
+		
 		 int L = 0;
 		 int R = arr.length - 1;
 		
-		 While(L<>)
+		 while(L<=R)
+		 {
+			 int mid = L + (R - L)/2;
+			 
+			 if(arr[mid] == query)
+			 {
+				 return mid;
+			 }
+			 
+			 if (query > arr[mid])
+			 {
+				 L = mid + 1;
+			 }
+			 else 
+			 {
+				 R = mid - 1;
+			 }
+		 }
+		 return -1;
 	}
 	
 	
 	
 	
 	
-	
+
 	
 	
 	
