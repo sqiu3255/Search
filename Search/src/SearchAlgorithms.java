@@ -1,3 +1,8 @@
+/*
+*  Author: Sophia Qiu
+*  Date Created: 01.12.2018
+*  Project Name: Search Algorithm
+*/
 
 public class SearchAlgorithms {
 
